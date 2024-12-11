@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GuestPageController implements Version {
     @Override
     public String description() {
-        return "Version 1";
+        return "Returns Guest Home Page";
     }
 
     @Override

@@ -14,4 +14,5 @@ public class Token {
     public String provideToken() {
         return STATIC_TOKEN;
     }
+
 }

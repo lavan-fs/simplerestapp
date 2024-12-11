@@ -16,11 +16,17 @@ public class UserPage implements AuthenticatedPage {
         return tokenService.authenticate(token);
     }
 
+
+    public ResponseDTO message(Object Status, Object error, Object data) {
+        responseDTO.setStatus((String) Status);
+        responseDTO.setError((String) error);
+        responseDTO.setData((String) data);
+        return responseDTO;
+    }
+
     @Override
     public ResponseDTO message() {
-        responseDTO.setStatus("success");
-        responseDTO.setError(null);
-        responseDTO.setData("This is the user-specific home page");
-        return responseDTO;
+      return null;
+
     }
 }

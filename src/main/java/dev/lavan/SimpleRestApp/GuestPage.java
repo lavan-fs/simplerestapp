@@ -9,6 +9,7 @@ public class GuestPage implements Page {
     private ResponseDTO responseDTO;
 
 
+
     @Override
     public ResponseDTO message() {
         responseDTO.setStatus("success");

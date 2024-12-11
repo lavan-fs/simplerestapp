@@ -9,6 +9,7 @@ public class ResponseDTO {
         this.error = null;
         this.data = null;
     }
+
     public String getStatus() {
         return status;
     }
