@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 public class UserPageController implements Version {
     @Autowired
     UserPage userpage;
+    @Autowired
+    ResponseDTO ResObj;
     @GetMapping("/home")
     public ResponseEntity<ResponseDTO> Homepage(@RequestHeader(value="Authorisation", required = false) String token ){
         if(token!=null && userpage.authenticate(token)){
@@ -16,9 +18,8 @@ public class UserPageController implements Version {
         return ResponseEntity.ok(response);
         }
 
-            ResponseDTO response= userpage.message("failure","No token found or authorisation failure",null);
+        throw new ErrorDTOException("No token found or authorisation failure",null,ResObj);
 
-        return ResponseEntity.badRequest().body(response);
     }
 
 

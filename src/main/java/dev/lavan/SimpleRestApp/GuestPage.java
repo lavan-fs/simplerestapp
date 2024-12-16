@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service;
 public class GuestPage implements Page {
     @Autowired
     private ResponseDTO responseDTO;
-
-
-
     @Override
     public ResponseDTO message() {
         responseDTO.setStatus("success");
